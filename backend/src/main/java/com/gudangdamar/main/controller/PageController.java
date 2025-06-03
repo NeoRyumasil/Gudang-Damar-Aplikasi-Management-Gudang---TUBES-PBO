@@ -169,4 +169,9 @@ public class PageController {
     public String closeSearch() {
         return "redirect:/halamanGudangBeranda";
     }
+    @GetMapping("/error")
+    public String errorPage(Model model) {
+        model.addAttribute("errorMessage", "Barang tidak ditemukan atau terjadi kesalahan.");
+        return "pages/error"; // Buat file error.html di templates/pages/
+    }
 }

@@ -70,13 +70,21 @@
     }
 
     @keyframes fadeIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .button-grid {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .filter-column {
@@ -132,13 +140,6 @@
           <button class="filter-button" type="submit" name="sort" value="expensive">Harga Mahal</button>
           <button class="filter-button" type="submit" name="sort" value="cheap">Harga Murah</button>
         </div>
-        <div class="filter-column">
-  <button class="filter-button" type="submit" name="filter" value="bentuk" th:if="${hasBentuk}">Bentuk</button>
-  <button class="filter-button" type="submit" name="filter" value="ukuran" th:if="${hasUkuran}">Ukuran</button>
-  <button class="filter-button" type="submit" name="filter" value="ketebalan" th:if="${hasKetebalan}">Ketebalan</button>
-  <button class="filter-button" type="submit" name="filter" value="material" th:if="${hasBahan}">Material</button>
-  <button class="filter-button" type="submit" name="filter" value="brand" th:if="${hasMerek}">Brand</button>
-</div>
     </form>
     <button class="close-btn" id="closeFilterBtn">Tutup</button>
   </div>
